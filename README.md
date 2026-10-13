@@ -1,6 +1,6 @@
 # Market Regime Clustering with K-Means
 
-A portfolio-ready educational project that identifies market regimes by
+identifies market regimes by
 clustering **rolling return distributions**, rather than clustering isolated
 daily returns.
 
