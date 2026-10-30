@@ -89,35 +89,6 @@ python3 -m pip install pytest
 python3 -m pytest -q
 ```
 
-## Suggested learning sequence
-
-### Milestone 1 — Understand returns
-Read `calculate_log_returns()` and verify that:
-
-```python
-log_return = log(price_today) - log(price_yesterday)
-```
-
-### Milestone 2 — Understand rolling distributions
-Read `build_distribution_features()`. Each row describes the trailing return
-distribution as of that date.
-
-### Milestone 3 — Understand K-means
-Read `fit_kmeans_regimes()`. The scaler is fitted before K-means so features
-with larger numerical ranges do not dominate Euclidean distance.
-
-### Milestone 4 — Interpret, do not rename blindly
-Cluster labels such as 0, 1 and 2 have no intrinsic meaning. Use annualized
-return, volatility, skewness, kurtosis and drawdown to describe each cluster.
-
-### Milestone 5 — Evaluate robustness
-Try:
-
-- windows: 60, 126 and 252 days
-- clusters: 2 through 8
-- assets: SPY, QQQ, GLD and TLT
-- multiple random seeds
-- train/test splits
 
 ## Important research limitations
 
