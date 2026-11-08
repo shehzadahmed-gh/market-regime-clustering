@@ -9,13 +9,9 @@ from src.regime_model import (
     score_cluster_counts,
 )
 
-
 st.set_page_config(page_title="K-Means Market Regimes", layout="wide")
 st.title("K-Means Market Regime Clustering")
-st.caption(
-    "Clusters rolling empirical return distributions represented by quantiles "
-    "and distribution statistics."
-)
+st.caption("Clusters rolling empirical return distributions represented by quantiles and distribution statistics.")
 
 with st.sidebar:
     ticker = st.text_input("Ticker", value="SPY").upper().strip()
@@ -59,21 +55,21 @@ if run:
     plt.close("all")
 
     st.subheader("Regime characteristics")
-    st.dataframe(result.cluster_summary.round(4), use_container_width=True)
+    st.dataframe(result.cluster_summary.round(4), width="stretch")
 
     st.subheader("Choosing the cluster count")
     st.line_chart(scores["silhouette"])
-    st.dataframe(scores.round(4), use_container_width=True)
+    st.dataframe(scores.round(4), width="stretch")
 
     st.subheader("Latest detected regime")
     latest_date = result.observations.index[-1]
     latest_regime = int(result.observations["regime"].iloc[-1])
     st.write(f"On **{latest_date.date()}**, the model assigns **Regime {latest_regime}**.")
 
-    st.warning(
-        "Regime numbers are arbitrary labels, not inherently 'bull' or 'bear'. "
-        "Interpret them using the summary table. This demo is educational and "
-        "does not constitute investment advice."
+    st.caption(
+        "Regimes are numbered from lowest to highest average volatility. Labels are fitted on the "
+        "whole sample, so each date's label uses data from after it; see walk_forward_regimes for "
+        "labels that only use the past. Not investment advice."
     )
 else:
     st.info("Choose settings in the sidebar and press **Run model**.")
