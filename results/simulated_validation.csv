@@ -1,0 +1,31 @@
+seed,window,features,ari,silhouette
+0,21,all 14 features,0.5954,0.5258
+0,21,volatility only,0.7683,0.7067
+0,63,all 14 features,0.4961,0.4492
+0,63,volatility only,0.5236,0.716
+0,126,all 14 features,0.4949,0.4343
+0,126,volatility only,0.4945,0.6668
+1,21,all 14 features,0.4038,0.5155
+1,21,volatility only,0.6682,0.6618
+1,63,all 14 features,0.3941,0.4904
+1,63,volatility only,0.6184,0.6651
+1,126,all 14 features,0.2844,0.419
+1,126,volatility only,0.3084,0.6712
+2,21,all 14 features,0.3949,0.4724
+2,21,volatility only,0.3914,0.6693
+2,63,all 14 features,0.3783,0.4728
+2,63,volatility only,0.5647,0.6231
+2,126,all 14 features,0.422,0.5068
+2,126,volatility only,0.4058,0.6319
+3,21,all 14 features,0.3229,0.4682
+3,21,volatility only,0.5638,0.5911
+3,63,all 14 features,0.4627,0.259
+3,63,volatility only,0.6751,0.6048
+3,126,all 14 features,0.2305,0.3681
+3,126,volatility only,0.241,0.6378
+4,21,all 14 features,0.5217,0.3242
+4,21,volatility only,0.688,0.6898
+4,63,all 14 features,0.6189,0.3523
+4,63,volatility only,0.7746,0.7272
+4,126,all 14 features,0.3287,0.4308
+4,126,volatility only,0.5002,0.6648
