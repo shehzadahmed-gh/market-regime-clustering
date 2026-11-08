@@ -1,3 +1,5 @@
+from datetime import date
+
 import matplotlib.pyplot as plt
 import streamlit as st
 
@@ -15,7 +17,8 @@ st.caption("Clusters rolling empirical return distributions represented by quant
 
 with st.sidebar:
     ticker = st.text_input("Ticker", value="SPY").upper().strip()
-    start = st.date_input("Start date", value="2005-01-01")
+    # Without explicit limits Streamlit only allows dates within 10 years of the default.
+    start = st.date_input("Start date", value=date(2005, 1, 1), min_value=date(1990, 1, 1), max_value=date.today())
     window = st.slider("Rolling window", 40, 252, 126, step=10)
     n_clusters = st.slider("Number of regimes", 2, 8, 4)
     use_synthetic = st.checkbox("Use synthetic data", value=False)
